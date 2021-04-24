@@ -1,20 +1,14 @@
 import json
 
 from flask import Flask, request, jsonify
-from flask_swagger_ui import get_swaggerui_blueprint
+from flask_swagger import swagger
 
 app = Flask(__name__)
 
 
-@app.route('/static/<path:path>')
-def send_static(path):
-    return send_from_directory('static', path)
-
-
-SWAGGER_URL = '/swagger'
-API_URL = '/static/swagger.json'
-
-swaggerui_blueprint = get_swaggerui_blueprint(SWAGGER_URL, API_URL, config={'app-name': 'semantic-similarity-flask'})
+@app.route('/spec')
+def spec():
+    return jsonify(swagger(app))
 
 
 @app.route('/', methods=['POST'])
