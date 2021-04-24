@@ -1,1 +1,1 @@
-# sematic-similarity
+# semantic-similarity
