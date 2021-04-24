@@ -1,11 +1,11 @@
 import json
 
-from flasgger import Swagger
+# from flasgger import Swagger
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-swagger = Swagger(app)
+# swagger = Swagger(app)
 
 
 @app.route('/', methods=['POST'])
@@ -26,4 +26,4 @@ def calc_score():
     })
 
 
-app.run(host='0.0.0.0', port=81, debug=True)
+app.run()
