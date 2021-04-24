@@ -1,6 +1,7 @@
 attrs==20.3.0
 click==7.1.2
 flasgger==0.9.5
+flask-swagger-ui==3.36.0
 Flask==1.1.2
 gunicorn==20.1.0
 itsdangerous==1.1.0
