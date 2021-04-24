@@ -1,8 +1,11 @@
 import json
 
+from flasgger import Swagger
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
+
+swagger = Swagger(app)
 
 
 @app.route('/', methods=['POST'])
